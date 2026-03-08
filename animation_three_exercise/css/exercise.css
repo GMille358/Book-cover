@@ -1,0 +1,139 @@
+/* All CSS styles go here */
+
+@font-face {
+    font-family: dirt;
+    src: url(../Rubik_Dirt/RubikDirt-Regular.ttf);
+}
+
+@keyframes up {
+    from { 
+        transform: translateY(-100%); 
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide {
+    from { 
+        transform: translateY(1050%); 
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-in {
+    from { 
+        transform: translateY(1800%); 
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes gradient {
+	0% { background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% { background-position: 0% 50%;}
+}
+
+p{
+    font-family: 'dirt';
+    font-size: 74px;
+    color: white;
+}
+
+.background{
+    /* background-image: url(../images/Background.png);
+    background-size: 100%; */
+    width: 722px;
+    height: 1000px;
+    background: linear-gradient(132deg, #01b1e3, #56d8fc, #a2d9e8);
+    /* background-color: #01b1e3; */
+    background-size: 300%,300%;
+    position:absolute;
+    top: -15%;
+    left: 25%;
+    scale: 55%;
+    animation: gradient 10s infinite;
+    overflow: hidden;
+}
+
+.title {
+    /* background-image: url(../images/Ttile.png);
+    background-size: 100%; */
+    width: 363px;
+    height: 260px;
+    margin: 5%;
+    position: relative;
+    z-index: 2;
+    top: -91%;
+    animation-delay: 4s;
+    animation: up 2s linear;
+    
+}
+
+
+.hikaru{
+    background-image: url(../images/Hikaru.png);
+    background-size: 100%;
+    width: 662px;
+    height: 912px;
+    position: relative;
+    top: 8.75%;
+    left: 7%;
+    
+}
+
+.brand {
+    background-image: url(../images/Brand.png);
+    background-size: 100%;
+    width: 76px;
+    height: 60px;
+    position: relative;
+    top: -34%;
+    left: 85%;
+    animation-delay: 5s;
+    animation: slide-in 4s ease-in-out;
+    
+        
+
+}
+
+.volume {
+    /* background-image: url(../images/Volume.png);
+    background-size: 100%; */
+    width: 173px;
+    height: 106px;
+    position: relative;
+    top: -45%;
+    left: 5%;
+    animation-delay: 5s;
+    animation: slide 4s  ease-in-out;
+    
+    
+}
+
+.type {
+    font-family: 'dirt';
+    font-size: 32px;
+    color: white;
+}
+
+.monster {
+    background-image: url(../images/monster.png);
+    background-size: 100%;
+    width: 828px;
+    height: 1200px;
+    position: relative;
+    rotate: 25deg;
+    z-index: -1;
+    top: -15%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.hikaru:hover .monster {
+    opacity: 1;
+}
